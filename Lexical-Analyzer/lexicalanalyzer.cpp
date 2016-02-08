@@ -32,11 +32,19 @@ cout<<"Variable      DataType  Memory\n";
 
 while(fin)
 {
+
     fin.get(c);
     
     temp[break_index] = c;
 
-    if(c==' ' || c == '\n' || c == ',' || c == '}') {
+    if(c==' ' || c == '\n' || c == ',' || c == '}' || c == '=' || c == '+') {
+
+
+        if(c=='(' || c == ')'|| c == '{'|| c == '}'|| c == ';'|| c == ','|| c == '"'|| c == '\'' || c == ')'){
+            cout<< "    =" << "   \t " << "Punctuation" << "\t " << 0 << "\n";
+        }else if( c == '+' || c == '+'|| c == '-'|| c == '*'|| c == '/' || c == '='|| c == '<' || c == '>' || c == '.' || c == ':'){
+            cout<< "    "<< c << "   \t " << "Operator" << "\t " << 0 << "\n";
+        }
 
   //Clear the space
         char newtemp[10000];
@@ -51,9 +59,14 @@ while(fin)
 
         
         for(int __i = 0 ; __i <  strlen(newtemp) ; __i++){
-            if(newtemp[__i] == ','  ||newtemp[__i] == ' ' || newtemp[__i] == ';' || newtemp[__i] == '('){
+            if(newtemp[__i] == '=' || newtemp[__i] == ','  ||newtemp[__i] == ' ' || newtemp[__i] == ';' || newtemp[__i] == '('|| newtemp[__i] == '+'|| newtemp[__i] == '-'|| newtemp[__i] == '*'|| newtemp[__i] == '/'|| newtemp[__i] == '|' || newtemp[__i] == '[' || newtemp[__i] == '"'|| newtemp[__i] == '{'|| newtemp[__i] == ')'|| newtemp[__i] == '}'|| newtemp[__i] == '<'|| newtemp[__i] == '>'){
                 newtemp[__i] = '\0'; 
                 break;
+            }else if(isdigit(newtemp[__i]) && !isalpha(newtemp[__i-1 ])){
+                newtemp[__i] = '\0';
+                
+                break;
+                
             }
         }
 
@@ -73,7 +86,8 @@ while(fin)
         else if(newtemp[0] == '#'){
         }else if(strcmp(newtemp,"main")==0 || strcmp(newtemp,"return")==0){
         }
-        else if(newtemp[0] == ' '){        }
+        else if(newtemp[0] == ' ' || newtemp[0] == '\0'){        }
+        
         else if(newtemp[0] == '<' || newtemp[0] == '}' || newtemp[0] == '{'){
         }
         else if(newtemp[0] == '\n'){
@@ -99,6 +113,7 @@ while(fin)
 
         break_index = 0 ;
         
+
         //Clear the variable temp and new temp
         for ( int i = 0 ; i< 40; i++){
             newtemp[i] = ' ';
