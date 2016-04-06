@@ -26,7 +26,7 @@ if e > 0 goto L3
 goto L1
 L3: return
 ```
-![alt text]( https://github.com/JacobSamro/Compiler-Design-Lab/07 Control Flow & Data Flow Analysis/control_flow.jpg)
+![alt text](https://raw.githubusercontent.com/JacobSamro/Compiler-Design-Lab/master/07%20Control%20Flow%20%26%20Data%20Flow%20Analysis/control_flow.jpg)
 ### C Version
 
 ```c
