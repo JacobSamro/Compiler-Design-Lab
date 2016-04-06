@@ -2,9 +2,7 @@
 
 based on the lecture by V. Krishna Nandivada from IIT Madras
 
-Code optimization requires that the compiler has a global understanding of how programs use the available resources.
-
-It has to understand the control flows in the program and how the data is manipulated (data-flow analysis)
+Code optimization requires that the compiler has a global understanding of how programs use the available resources.It has to understand the control flows in the program and how the data is manipulated (data-flow analysis)
 
 Control-flow analysis: flow of control within each procedure.
 
@@ -28,6 +26,7 @@ if e > 0 goto L3
 goto L1
 L3: return
 ```
+![alt text]( https://github.com/JacobSamro/Compiler-Design-Lab/07 Control Flow & Data Flow Analysis/control_flow.jpg)
 ### C Version
 
 ```c
