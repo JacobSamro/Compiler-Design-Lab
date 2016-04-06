@@ -14,17 +14,17 @@ Control-flow analysis discovers the flow of control within a procedure
 (e.g., builds a CFG, identifies loops)
 
 ```sh
-a := 0
-b := a * b
-L1: c := b/d
-if c < x goto L2
-e := b / c
-f := e + 1
-L2: g := f
-h := t - g
-if e > 0 goto L3
-goto L1
-L3: return
+1   a := 0
+2   b := a * b
+3   L1: c := b/d
+4   if c < x goto L2
+5   e := b / c
+6   f := e + 1
+7   L2: g := f
+8   h := t - g
+9   if e > 0 goto L3
+10  goto L1
+11  L3: return
 ```
 ![alt text](https://raw.githubusercontent.com/JacobSamro/Compiler-Design-Lab/master/07%20Control%20Flow%20%26%20Data%20Flow%20Analysis/control_flow.jpg)
 ### C Version
