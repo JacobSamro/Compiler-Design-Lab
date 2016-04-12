@@ -24,9 +24,7 @@ int token;
 }
 symtable[100];
 struct entry
-keywords[]={"if",KEYWORD,"else",KEYWORD,"for",KEYWORD,"int",KEYWORD,
-"float",KEYWORD,"double",KEYWORD,"char",KEYWORD,"struct",KEYWORD,"ret
-urn",KEYWORD,0,0};
+keywords[]={"if",KEYWORD,"else",KEYWORD,"for",KEYWORD,"int",KEYWORD,"float",KEYWORD,"double",KEYWORD,"char",KEYWORD,"struct",KEYWORD,"return",KEYWORD,0,0};
 void Error_Message(char *m)
 
 {
