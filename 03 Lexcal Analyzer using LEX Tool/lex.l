@@ -42,7 +42,7 @@ digit[0-9]
 \>= |
 \< |
 == |
-\> {if(!COMMENT) printf("\n\t%s is an relational operator");}
+\> {if(!COMMENT) printf("\n\t%s is an relational operator",yytext);}
 %%
 int main(int argc,char **argv)
 {
