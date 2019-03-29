@@ -1,6 +1,6 @@
 Steps to compile
 
 ```
-gcc symboltable.cpp
+g++ symboltable.cpp
 ./a.out
 ```
